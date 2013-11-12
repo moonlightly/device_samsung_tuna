@@ -82,25 +82,25 @@ static struct sensor_t sSensorList[LOCAL_SENSORS + MPLSensor::numSensors] = {
           1, SENSORS_LIGHT_HANDLE,
           SENSOR_TYPE_LIGHT, powf(10, 125.0f/ 24.0f) * 4, 1.0f, 0.75f, 0,
 #ifdef SENSORS_DEVICE_API_VERSION_1_1
-	  0, 0,
+          0, 0,
 #endif
-	  { } },
+          { } },
       { "GP2A Proximity sensor",
           "Sharp",
           1, SENSORS_PROXIMITY_HANDLE,
           SENSOR_TYPE_PROXIMITY, 5.0f, 5.0f, 0.75f, 0,
 #ifdef SENSORS_DEVICE_API_VERSION_1_1
-	  0, 0,
+          0, 0,
 #endif
-	  { } },
+          { } },
       { "BMP180 Pressure sensor",
           "Bosch",
           1, SENSORS_PRESSURE_HANDLE,
           SENSOR_TYPE_PRESSURE, 1100.0f, 0.01f, 0.67f, 20000,
 #ifdef SENSORS_DEVICE_API_VERSION_1_1
-	  0, 0,
+          0, 0,
 #endif
-	  { } },
+          { } },
 };
 static int numSensors = LOCAL_SENSORS;
 
@@ -400,3 +400,4 @@ static int open_sensors(const struct hw_module_t* module, const char* id,
 
     return status;
 }
+
